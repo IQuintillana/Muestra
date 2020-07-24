@@ -1,0 +1,92 @@
+body {
+    background-color:RGB(255,248,231);
+}
+
+header {
+    margin-left:250px;
+    width:1000px;
+    margin:auto;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+header > span {
+    width:500px;
+    margin:250px;
+}
+
+nav {
+    color:white;
+    width:1000px;
+    background-color:RGB(39,109,123);
+    margin:auto;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+nav > span > table {
+    width:900px;
+    margin:auto;
+    font-size:24px;
+    text-align:center;
+}
+
+h1, h2 {
+    margin-top:10px;
+    margin-bottom:10px;
+    color:blue;
+}
+
+body > div {
+    width:1000px;
+    margin:auto;
+    padding:auto;
+}
+
+body > div > table {
+    background-color:RGB(253,205,80);
+}
+
+footer {
+    text-align:center;
+    border-top: 1px solid black;
+    width:85%;
+    margin-left:250px;
+}
+
+label {
+    width:20%;
+    margin-right:5px;
+    display:inline-block;
+    text-align:right;
+    vertical-align:top;
+    font-weight:bold;
+}
+
+input {
+    width:150px;
+    margin-left:100px;
+}
+
+select { 
+    width:150px;
+    margin-left:100px;
+}
+
+table {
+    width:1000px;
+}
+
+#ponencia {
+    width:1000px;
+    margin:auto;
+}
+
+#taller {
+    width:1000px;
+    margin:auto;
+}
+
+tr > td:nth-child(3), tr > td:nth-child(4) {
+    text-align:center;
+}

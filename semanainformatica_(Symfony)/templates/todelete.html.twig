@@ -1,0 +1,8 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Borrar {{ a.user }}{% endblock %}
+{% block bodydiv %}
+    <h1>¿Seguro que quieres eliminar al usuario  "{{ a.user }}"?</h1>
+    <a href="{{ path('borraUsuario', {'id':s}) }}">SI</a>
+    <a href="{{ path('usuarios') }}">NO</a>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Talleres{% endblock %}
+{% block bodydiv %}
+    <h1>Listado de talleres</h1>
+    {% if talleres %}
+        <table>
+            <tr><th>ID</th><th>Titulo</th><th>Categoría</th><th>Likes</th><th></th><th></th><th></th><th></th>{% if is_granted('ROLE_ADMIN') %}{% endif %}</tr>
+        {% for ta in talleres %}
+            <tr>
+                <td>{{ ta.id }}</td>
+                <td>{{ ta.titulota }}</td>
+                <td>{{ ta.categoriatallerId.nombre }}</td>
+                <td>{{ ta.liketa }}</td>
+                <td><a href="{{ path('liktaller', {'id':ta.id}) }}"><img src="{{ asset('img/silikes.png') }}" /></a></td>
+                <td><a href="{{ path('disliktaller', {'id':ta.id}) }}"><img src="{{ asset('img/nolikes.png') }}" /></a></td>
+                <td><a href="{{ path('borraTaller', {'id':ta.id}) }}"><img src="{{ asset('img/eliminar.png') }}" /></a></td>
+                <td><a href="{{ path('editar_taller', {'id':ta.id}) }}">EDITAR</a></td>
+                {% if is_granted('ROLE_ADMIN') %}
+                {% endif %}
+			</tr>
+        {% endfor %}
+        </table>
+    {% else %}
+        <p>No hay talleres</p>
+    {% endif %}
+{% endblock %}

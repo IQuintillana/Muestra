@@ -1,0 +1,8 @@
+{% extends "layout.html.twig" %}
+{% block title %}Editar usuario "{{ registrar.user }}"{% endblock %}
+{% block bodydiv %}
+    <h1>Editar usuario "{{ registrar.user }}"</h1>
+    {{ form_start(formulario, {'attr': {'novalidate': 'novalidate'}}) }}
+    {{ form_widget(formulario) }}
+    {{ form_end(formulario) }}
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block headdiv %}<img src="{{ asset('img/cabecerapeque.jpg') }}" />{% endblock %}
+{% block stylesheets %}
+    <link href="{{ asset('css/estilos.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block navdiv %}
+        <table>
+            <tr>
+                <td><a href="{{ path('inicio') }}">INICIO</a></td>
+                <td><a href="{{ path('ponencia') }}">PONENCIAS</a></td>
+                <td><a href="{{ path('taller') }}">TALLERES</a></td>
+                <td><a href="{{ path('newPonencia') }}">PONENCIA++</a></td>
+            </tr>
+            <tr>
+                <td><a href="{{ path('newTaller') }}">TALLER++</a></td>
+                <td><a href="{{ path('login') }}">LOGIN</a></td>
+                <td><a href="{{ path('registrar') }}">Nuevo USUARIO</a></td>
+                <td><a href="{{ path('usuarios') }}">Mostrar USUARIOS</a></td>
+            </tr>
+        </table>
+{% endblock %}
+{% block footer %}
+{# <a href="{{ path('logout') }}">Cerrar sesión</a> #}
+<p>- DWES 2019/2020 -</p>
+{% endblock %}

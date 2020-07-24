@@ -1,0 +1,24 @@
+{% extends "layout.html.twig" %}
+{% block title %}Lista de usuarios{% endblock %}
+{% block bodydiv %}
+    <h1>Lista de usuarios</h1>
+    {% if registrar %}
+        <table>
+            <tr><th>ID</th><th>Usuario</th><th>Contraseña</th><th>Rol</th><th></th><th></th>{% if is_granted('ROLE_ADMIN') %}{% endif %}</tr>
+        {% for re in registrar %}
+            <tr>
+				<td>{{ re.id }}</a> </td>
+                <td>{{ re.user }}</td>
+                <td>{{ re.pass }}</td>
+                <td>{{ re.rol }}</td>
+                <td><a href="{{ path('confirmar', {'id':re.id}) }}"><img src="{{ asset('img/eliminar.png') }}" /></a></td>
+                <td><a href="{{ path('editar_usuario', {'id':re.id}) }}">EDITAR</a></td>
+                {% if is_granted('ROLE_ADMIN') %}
+                {% endif %}
+			</td>
+        {% endfor %}
+        </table>
+    {% else %}
+        <p>No hay usuarios</p>
+    {% endif %}
+{% endblock %}
